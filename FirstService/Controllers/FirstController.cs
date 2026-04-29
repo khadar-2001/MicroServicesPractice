@@ -48,6 +48,13 @@ namespace FirstService.Controllers
         }
 
         [HttpGet]
+        [Route("Hello2")]
+        public async Task<IActionResult> Hello2()
+        {
+            return Ok("Hello students! I am from GitTest");
+        }
+
+        [HttpGet]
         [Route("CoursethroughApi")]
         [EnableRateLimiting("FixedPolicy")]
         public async Task<IActionResult> CoursethroughApi()
